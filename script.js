@@ -60,10 +60,14 @@ function getRandomWord() {
 
 // Add word to DOM
 function addWordToDOM() {
+  if(words.length == 0) {
+    youWin();
+  } else {
   randomWord = getRandomWord();
   word.innerHTML = randomWord;
   words = words.filter(item => item !== randomWord)
   console.log(words);
+  }
 }
 
 // Update score
@@ -88,6 +92,17 @@ function updateTime() {
 function gameOver() {
   endgameEl.innerHTML = `
     <h1>Time ran out</h1>
+    <p>Your final score is ${score}</p>
+    <button onclick="location.reload()">Reload</button>
+  `;
+
+  endgameEl.style.display = "flex";
+}
+
+// Game over screen if user finishes all words in the array
+function youWin() {
+  endgameEl.innerHTML = `
+    <h1>You won!</h1>
     <p>Your final score is ${score}</p>
     <button onclick="location.reload()">Reload</button>
   `;
