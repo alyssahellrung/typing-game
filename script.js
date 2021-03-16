@@ -102,6 +102,7 @@ function gameOver() {
 // Game over screen if user finishes all words in the array
 function youWin() {
   clearInterval(timeInterval);
+  score ++;
   endgameEl.innerHTML = `
     <h1>You won!</h1>
     <p>Your final score is ${score}</p>
