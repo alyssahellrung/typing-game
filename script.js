@@ -9,7 +9,7 @@ const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
 // List of words for game
-const words = [
+let words = [
   "sigh",
   "tense",
   "airplane",
@@ -41,9 +41,6 @@ let score = 0;
 // Init time
 let time = 10;
 
-// Init attemptedWords
-let attemptedWords = [];
-
 // Set difficulty to value in local storage or medium
 let difficulty = localStorage.getItem("difficulty") !== null ? localStorage.getItem("difficulty") : "medium";
 
@@ -61,22 +58,12 @@ function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }
 
-function checkRandomWord(randomWord) {
-  if(attemptedWords.indexOf(randomWord) == -1) {
-    attemptedWords.push(randomWord);
-    console.log(attemptedWords);
-    return randomWord;
-  } else {
-    randomWord = getRandomWord();
-    checkRandomWord(randomWord);
-  }
-}
-
 // Add word to DOM
 function addWordToDOM() {
   randomWord = getRandomWord();
-  let goodWord = checkRandomWord(randomWord);
-  word.innerHTML = goodWord;
+  word.innerHTML = randomWord;
+  words = words.filter(item => item !== randomWord)
+  console.log(words);
 }
 
 // Update score
