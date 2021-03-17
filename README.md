@@ -37,4 +37,3 @@ https://github.com/alyssahellrung/typing-game
 
 ## Future Development Ideas           
 --Get a word list from an API rather than using the hard-coded list.   
---Make it so that users cannot get the same word more than once.
