@@ -8,19 +8,10 @@ const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
-
+const APIkey = "ov5ckzky5dky9lts0q3i56sikl0673wy1sjiei9e38chfrsw2"
 
 // Init words
 // let words = [];
-
-// getWordList();
-
-// async function getWordList() {
-//   const res = await fetch("https://api.wordnik.com/v4/words.json/randomWords?limit=10&api_key="+APIkey);
-//   const data = await res.json();
-
-//   console.log(data);
-// }
 
 // Init word
 let randomWord;
@@ -43,6 +34,17 @@ text.focus();
 // Start counting down
 const timeInterval = setInterval(updateTime, 1000);
 
+// Get list of words from API
+// async function getWordList() {
+//   const res = await fetch("https://api.wordnik.com/v4/words.json/randomWords?limit=10&api_key="+APIkey);
+//   const data = await res.json();
+//   data.forEach(item => {
+//     words.push(item.word);
+//   });
+  
+//   return words;
+// }
+
 // Generate random word from array
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
@@ -53,10 +55,10 @@ function addWordToDOM() {
   if(words.length == 0) {
     youWin();
   } else {
-  randomWord = getRandomWord();
-  word.innerHTML = randomWord;
-  words = words.filter(item => item !== randomWord)
-  console.log(words);
+    randomWord = getRandomWord();
+    word.innerHTML = randomWord;
+    words = words.filter(item => item !== randomWord)
+    console.log(words);
   }
 }
 
