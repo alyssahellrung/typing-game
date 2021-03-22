@@ -8,29 +8,19 @@ const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
-// List of words for game
-// let words = [
-//   "sigh",
-//   "tense",
-//   "airplane",
-//   "ball",
-//   "pies",
-//   "juice",
-//   "warlike",
-//   "bad",
-//   "north",
-//   "dependent",
-//   "steer",
-//   "silver",
-//   "highfalutin",
-//   "superficial",
-//   "quince",
-//   "eight",
-//   "feeble",
-//   "admit",
-//   "drag",
-//   "loving",
-// ];
+
+
+// Init words
+// let words = [];
+
+// getWordList();
+
+// async function getWordList() {
+//   const res = await fetch("https://api.wordnik.com/v4/words.json/randomWords?limit=10&api_key="+APIkey);
+//   const data = await res.json();
+
+//   console.log(data);
+// }
 
 // Init word
 let randomWord;
