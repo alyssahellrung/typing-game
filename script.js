@@ -8,7 +8,7 @@ const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
-const APIkey = "ov5ckzky5dky9lts0q3i56sikl0673wy1sjiei9e38chfrsw2"
+
 
 // Init words
 // let words = [];
