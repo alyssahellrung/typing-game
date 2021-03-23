@@ -24,7 +24,7 @@ CSS
 Javascript           
 
 ## How to Use      
-Navigate to https://alyssahellrung.github.io/typing-game. (More coming soon)          
+Navigate to https://alyssahellrung.github.io/typing-game. The countdown timer will start immediately, so try to type as many of the words as possible before time runs out. When time runs out, you will see your score. If you finish all 100 words before time runs out, you win! You can adjust the difficulty level in the dropdown menu at the top of the page. If you want the menu to disappear, click the settings button on the bottom left corner of the page.       
 
 ## How I Made This      
 (Coming Soon)
@@ -36,4 +36,4 @@ https://alyssahellrung.github.io/typing-game
 https://github.com/alyssahellrung/typing-game  
 
 ## Future Development Ideas           
---Get a word list from an API rather than using the hard-coded list.   
+--Try to incorporate a random word API so the user gets a new word list every time they play.  
