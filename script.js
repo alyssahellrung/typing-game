@@ -9,10 +9,6 @@ const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
 
 
-
-// Init words
-// let words = [];
-
 // Init word
 let randomWord;
 
@@ -33,17 +29,6 @@ text.focus();
 
 // Start counting down
 const timeInterval = setInterval(updateTime, 1000);
-
-// Get list of words from API
-// async function getWordList() {
-//   const res = await fetch("https://api.wordnik.com/v4/words.json/randomWords?limit=10&api_key="+APIkey);
-//   const data = await res.json();
-//   data.forEach(item => {
-//     words.push(item.word);
-//   });
-  
-//   return words;
-// }
 
 // Generate random word from array
 function getRandomWord() {
